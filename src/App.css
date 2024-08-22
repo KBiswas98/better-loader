@@ -5,38 +5,111 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.welcome > h2 {
+  font-size: 66px;
+  margin-bottom: 1rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.welcome > p {
+  font-size: 22px;
+  margin-bottom: 2rem;
+}
+
+.action-section {
+  text-align: left;
+}
+
+.action-section > div {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 300px;
+  justify-content: start;
+  align-items: start;
+  text-align: left;
+}
+
+.action-section > textarea {
+  width: 400px;
+  height: 400px;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.action-section > div {
+  display: flex;
+  gap: 5px;
+}
+
+.action-section > div > button {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.body-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+/* -------------------> Skeleton <-------------- */
+.skeleton {
+  background: linear-gradient(
+    var(--gradient-angle),
+    #f0f0f0 25%,
+    #e0e0e0 50%,
+    #f0f0f0 75%
+  );
+  background-size: 200% 100%;
+  animation: loading var(--animation-speed) infinite;
+  border-radius: 4px;
+}
+
+/* Skeleton Line (Text) */
+.skeleton-line {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+/* Skeleton Box (Rectangular Area) */
+.skeleton-box {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.skeleton-avatar {
+  border-radius: 50%;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 100% 100%;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    background-position: -100% -100%;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #ffffff;
+  border-radius: 10px;
+  gap: var(--grid-gap);
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.grid-row {
+  display: contents;
 }
